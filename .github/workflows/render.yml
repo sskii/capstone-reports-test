@@ -8,6 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: create output directory
+        run:
+          mkdir output
+
       - uses: docker://pandoc/latex:3.1
         with:
           args: --output=output/test.pdf test.md
