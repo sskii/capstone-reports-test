@@ -6,13 +6,18 @@ jobs:
   pdf:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: docker://pandoc/latex:3.1
+      - uses: docker://pandoc/latex:3.1.1.0
         with:
-          args: --output=render.pdf main.md
+          args: >-
+            --template template.tex
+            --highlight-style .support-files/code.theme
+            --lua-filter .support-files/include-files.lua
+            --output render.pdf
+            main.md
           
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: render.pdf
           path: render.pdf
