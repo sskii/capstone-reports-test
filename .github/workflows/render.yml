@@ -8,15 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: create output directory
-        run:
-          mkdir output
-
       - uses: docker://pandoc/latex:3.1
         with:
-          args: --output=output/test.pdf test.md
+          args: --output=render.pdf main.md
           
       - uses: actions/upload-artifact@v3
         with:
-          name: output
-          path: output
+          name: render.pdf
+          path: render.pdf
