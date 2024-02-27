@@ -1,9 +1,9 @@
-name: Render LaTeX and PDF
+name: Render
 
 on: push
 
 jobs:
-  convert_via_pandoc:
+  pdf:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
