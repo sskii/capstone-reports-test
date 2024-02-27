@@ -10,6 +10,12 @@ Feel free to push test commits to try this out. The action responds to pushes on
 
 ## Why Markdown?
 
-You can still type inline \LaTeX if you really want and if you know what you're doing there. The advantage of this method using Actions is that we can use Git to version everything and keep collaboration in the same place, all without having to worry about TeX with its verbose syntax and frequent errors all semseter.
+Because all our work is stored in plain text and supporting files, Git (which we have to use anyway) works wonders for version control. Keeping all of our collaboration in one place should make things quicker. Having a cached PDF for every commit means that we will be able to recover from any mistakes much more readily, useful when deadlines eventually loom.
 
-![Hopefully not us](https://thumbs.dreamstime.com/z/crying-man-modern-technology-26675651.jpg)
+Because the GitHub Action uses \LaTeX  as an intermediate step, we'll get all of its power without the verbose syntax and frequent errors. We will also be sure to always conform to the coordinators' template, something they seem particularly picky about in this course.
+
+This workflow also frees each individual team member up to use their favourite Markdown editor for the job, or even to edit on the GitHub website directly.
+
+All in all, we should hopefully not end up like the unfortunate fellow in \autoref{fig:notus}.
+
+![Hopefully not any of us! \label{fig:notus}](https://thumbs.dreamstime.com/z/crying-man-modern-technology-26675651.jpg)
