@@ -11,10 +11,13 @@ jobs:
       - uses: docker://pandoc/latex:3.1.1.0
         with:
           args: >-
-            --template template.tex
+            --variable title="ECSE Capstone Project Risk Analysis: Team \#1"
+            --variable author="Person 1, Person 2"
+            --variable date="Semester 1, 2024"
+            --variable numbersections=false
+            --template defaulttemplate.tex
             --highlight-style .support-files/code.theme
             --lua-filter .support-files/include-files.lua
-            --variable numbersections=false
             --output render.pdf
             main.md
           
